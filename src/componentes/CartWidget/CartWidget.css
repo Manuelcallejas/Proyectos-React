@@ -1,0 +1,11 @@
+.card_kart{
+display: flex;
+gap: 10px; 
+
+text-align: center;
+}
+
+.kart{
+    color: white;
+    font-size: 30px;
+}
