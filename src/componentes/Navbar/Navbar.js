@@ -1,5 +1,6 @@
 import  './Navbar.css'
 import CartWidget from '../CartWidget/CartWidget'
+import { Link } from 'react-router-dom'
 
 export const Navbar = () => {
     return (
@@ -10,9 +11,9 @@ export const Navbar = () => {
                 <img src='./img/logo.png' className='logo_nav' alt='logo'></img>
 
                 <nav className="list_nav">
-                    <p className="item_nav">MENU</p>
-                    <p className="item_nav">INFO</p>
-                    <p className="item_nav">STOCK</p>
+                    <Link to="/"  className="item_nav">MENU</Link>
+                    <Link to="/" className="item_nav">INFO</Link>
+                    <Link to="/PokeApi" className="item_nav">POKEMON</Link>
                 </nav>
                 <CartWidget/>
             </div>
