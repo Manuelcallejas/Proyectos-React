@@ -9,16 +9,16 @@ const ItemListConteiner = () =>{
     const[productos, setProductos] = useState([])
     const[loading , setLoading] = useState(true)
 
-    const {categoriaId} = useParams ()
+    const {categoryId} = useParams ()
     
     useEffect(() => {
         setLoading(true)
-        console.log( categoriaId)
+        
 
         pedirDatos()
             .then((res) => {
-                if(categoriaId){
-                    setProductos(res.filter((prod) => prod.categoria === categoriaId))
+                if(categoryId){
+                    setProductos(res.filter((prod) => prod.categoria === categoryId))
                 } else{
                     setProductos(res)
                 }
